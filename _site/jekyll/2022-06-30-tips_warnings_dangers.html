@@ -1,0 +1,1179 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Tips, Warnings, and Dangers · Let&#39;s Dive</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Let's Dive
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Hyeonsuk"><link rel="stylesheet" href="/assets/gitbook/style.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/assets/gitbook/custom-local.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/jekyll/2022-06-26-wide_tables.html" />
+        
+
+        
+            <link rel="next" href="/jekyll/2023-08-31-mermaid.html" />
+        
+    </head>
+    <body>
+        <div class="book"><div class="book-summary">
+    <script type="text/javascript">
+        // Fixes the page links scroll problem on both desktop and mobile browsers
+        function pageScrollToTop(element) {
+            // both mobile and non-mobile
+            $('div.body-inner').animate({scrollTop: 0});
+            $(element).parent().find('li>ul>li').removeClass('active');
+            return true;  // propagate
+        }
+        // Fixes the anchor links scroll problem on mobile browsers
+        function mobilePageScrollToAnchor(element) {
+            $(element).closest('li.chapter').find('ul>li').removeClass('active');
+            $(element).parent().addClass('active');
+            if ($(document).width() <= 1240) {
+                $('div.body-inner').animate({scrollTop: $($(element).attr('href')).get(0).offsetTop});
+            }
+            return true;
+        }
+    </script>
+
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="">
+            
+                <a href="/" onclick="pageScrollToTop(this)">
+                    Let&#39;s Dive
+                </a>
+            </li>
+
+            <li class="divider"></li>
+
+            
+                <!-- <p>pages</p> -->
+            
+                
+
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/pages/about/">
+                    
+                        <a href="/pages/about/" onclick="pageScrollToTop(this)">
+                            About
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/pages/contact/">
+                    
+                        <a href="/pages/contact/" onclick="pageScrollToTop(this)">
+                            Contact
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/pages/design/draft/">
+                    
+                        <a href="/pages/design/draft/" onclick="pageScrollToTop(this)">
+                            Design Draft
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+
+                
+                    <li class="divider"></li>
+                
+            
+        
+                <!-- <p>posts</p> -->
+            
+                
+
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2019-04-27-why.html">
+                    
+                        <a href="/jekyll/2019-04-27-why.html" onclick="pageScrollToTop(this)">
+                            Why Jekyll with GitBook
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2019-04-28-howto.html">
+                    
+                        <a href="/jekyll/2019-04-28-howto.html" onclick="pageScrollToTop(this)">
+                            How to Get Started
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2019-04-29-license.html">
+                    
+                        <a href="/jekyll/2019-04-29-license.html" onclick="pageScrollToTop(this)">
+                            License
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2021-08-10-toc.html">
+                    
+                        <a href="/jekyll/2021-08-10-toc.html" onclick="pageScrollToTop(this)">
+                            How to Generate TOC
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-05-24-page_cover.html">
+                    
+                        <a href="/jekyll/2022-05-24-page_cover.html" onclick="pageScrollToTop(this)">
+                            Page with cover image
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-06-26-wide_tables.html">
+                    
+                        <a href="/jekyll/2022-06-26-wide_tables.html" onclick="pageScrollToTop(this)">
+                            Wide tables
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-06-30-tips_warnings_dangers.html">
+                    
+                        <a href="/jekyll/2022-06-30-tips_warnings_dangers.html" onclick="pageScrollToTop(this)">
+                            Tips, Warnings, and Dangers
+                        </a>
+                    
+                        
+                            <ul><li><a href="#tips" onclick="mobilePageScrollToAnchor(this)" >Tips</a></li><li><a href="#warnings" onclick="mobilePageScrollToAnchor(this)" >Warnings</a></li><li><a href="#dangers" onclick="mobilePageScrollToAnchor(this)" >Dangers</a></li></ul>
+
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2023-08-31-mermaid.html">
+                    
+                        <a href="/jekyll/2023-08-31-mermaid.html" onclick="pageScrollToTop(this)">
+                            Diagrams with mermaid.js
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2023-10-14-math-latex.html">
+                    
+                        <a href="/jekyll/2023-10-14-math-latex.html" onclick="pageScrollToTop(this)">
+                            MathJax and LaTeX
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+                    
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2023-12-12-footnotes.html">
+                    
+                        <a href="/jekyll/2023-12-12-footnotes.html" onclick="pageScrollToTop(this)">
+                            Using Footnotes
+                        </a>
+                    
+                        
+                    
+                        </li>
+                
+
+                
+                    <li class="divider"></li>
+                
+            
+        
+        </ul>
+        
+        
+
+
+
+
+
+
+
+    <!--/component/software/-->
+    <!--/compenent/software/2024-01-03-hey.html-->
+    <!-- 위 string들이 pagePath가 됨.-->
+    <a>Jekyll Gitbook Themealpha</a>
+
+  
+  
+
+  <!--pathSlice는  /component -->
+
+  <!-- component 폴더 내의 컨텐츠인 경우에-->
+  
+
+    <!--/component/software/-->
+    <!--/compenent/software/2024-01-03-hey.html-->
+    <!-- 위 string들이 pagePath가 됨.-->
+    <a>alpha</a>
+
+  
+  
+
+  <!--pathSlice는  /component -->
+
+  <!-- component 폴더 내의 컨텐츠인 경우에-->
+  
+
+    <!--/component/software/-->
+    <!--/compenent/software/2024-01-03-hey.html-->
+    <!-- 위 string들이 pagePath가 됨.-->
+    <a>alpha</a>
+
+  
+  
+
+  <!--pathSlice는  /component -->
+
+  <!-- component 폴더 내의 컨텐츠인 경우에-->
+  
+
+    <!--/component/software/-->
+    <!--/compenent/software/2024-01-03-hey.html-->
+    <!-- 위 string들이 pagePath가 됨.-->
+    <a>Softwarealpha</a>
+
+  
+  
+
+  <!--pathSlice는  /component -->
+
+  <!-- component 폴더 내의 컨텐츠인 경우에-->
+  
+    
+    <!-- pagePathLength 는 pagepath의 크기-->
+    
+    
+    <!-- extractLastCharPos는 pagePath의 크기 -1, 마지막 character의 인덱스 -->
+    
+    <!-- lastChar은 마지막 character-->
+
+
+    <!--/component/software/-->
+    <!-- size == 20-->
+    <!-- lastCharpos = 19-->    
+    <!-- if 폴더인 경우 pagePath는 /component/software-->
+    
+
+    
+    
+    
+    <!-- nextPathLength는 page url을 /로 split한 array의 사이즈-->
+    <!-- /component/software 인 경우에 , nextPath는 component, software-->
+    <!-- nextPathLength는 2-->
+    <!-- nextPath는 다음 path의 로직에서의 lastPath가 될 수 있음-->
+
+
+    <!--처음 loop일 경우, nextPathLength 는 항상 lastPathLength보다 크다.-->
+    
+      
+      <!-- nextPath 배열은 longestPath로 치환-->
+      
+      <!-- lastPath는 lastPath-->
+    
+
+
+
+    
+
+    <!--1.  longest Path가 nextPath가 된 경우 ( 이 의미는 해당 컨텐츠가 이전 loop의 하위 폴더일 가능성이 있다고 볼 수 있다.)-->
+    <!--2.  새로운 폴더일 경우에 longestPath는 lastPath가 된다. 이 내용을 숙지하고 아래 내용을 보자-->
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+        <!-- 해당 분기는 longesPath의 현재 component의 인덱스-1 의 값이 shortedPath의 lastIndex와 같지 않고,-->
+        <!-- 현재 component가 last 아이템이 아닐경우-->
+        <!-- 위내용의 의미는 -->
+        
+
+        
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+        <!-- 해당 분기는 longesPath의 현재 component의 인덱스-1 의 값이 shortedPath의 lastIndex와 같지 않고,-->
+        <!-- 현재 component가 last 아이템이 아닐경우-->
+        <!-- 위내용의 의미는 -->
+        
+
+        
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+        <!-- 해당 분기는 longesPath의 현재 component의 인덱스-1 의 값이 shortedPath의 lastIndex와 같지 않고,-->
+        <!-- 현재 component가 last 아이템이 아닐경우-->
+        <!-- 위내용의 의미는 -->
+        
+
+        
+      
+    
+
+    <!-- 하위 폴더가 아닌 새로운 depth라면, 아래 분기를 탄다.-->
+    
+        <!-- levelDiff는 이전 Path arrary의 길이 에서 현재 Path array의 길이를 뺀다.-->
+        <!-- a b-->
+        <!-- a b c -->
+        <!-- levelDiff는 -1-->
+      
+
+      
+        <ul class="" data-menu-depth="0">
+      
+    
+
+    
+
+    <li class="">
+      
+
+      Software aa
+
+      
+    
+  
+
+    <!--/component/software/-->
+    <!--/compenent/software/2024-01-03-hey.html-->
+    <!-- 위 string들이 pagePath가 됨.-->
+    <a>Hellloalpha</a>
+
+  
+  
+
+  <!--pathSlice는  /component -->
+
+  <!-- component 폴더 내의 컨텐츠인 경우에-->
+  
+    
+    <!-- pagePathLength 는 pagepath의 크기-->
+    
+    
+    <!-- extractLastCharPos는 pagePath의 크기 -1, 마지막 character의 인덱스 -->
+    
+    <!-- lastChar은 마지막 character-->
+
+
+    <!--/component/software/-->
+    <!-- size == 20-->
+    <!-- lastCharpos = 19-->    
+    <!-- if 폴더인 경우 pagePath는 /component/software-->
+    
+
+    
+    
+    
+    <!-- nextPathLength는 page url을 /로 split한 array의 사이즈-->
+    <!-- /component/software 인 경우에 , nextPath는 component, software-->
+    <!-- nextPathLength는 2-->
+    <!-- nextPath는 다음 path의 로직에서의 lastPath가 될 수 있음-->
+
+
+    <!--처음 loop일 경우, nextPathLength 는 항상 lastPathLength보다 크다.-->
+    
+      
+      <!-- nextPath 배열은 longestPath로 치환-->
+      
+      <!-- lastPath는 lastPath-->
+    
+
+
+
+    
+
+    <!--1.  longest Path가 nextPath가 된 경우 ( 이 의미는 해당 컨텐츠가 이전 loop의 하위 폴더일 가능성이 있다고 볼 수 있다.)-->
+    <!--2.  새로운 폴더일 경우에 longestPath는 lastPath가 된다. 이 내용을 숙지하고 아래 내용을 보자-->
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+        <!-- 해당 분기는 longesPath의 현재 component의 인덱스-1 의 값이 shortedPath의 lastIndex와 같지 않고,-->
+        <!-- 현재 component가 last 아이템이 아닐경우-->
+        <!-- 위내용의 의미는 -->
+        
+
+        
+      
+    
+
+    <!-- 하위 폴더가 아닌 새로운 depth라면, 아래 분기를 탄다.-->
+    
+        <!-- levelDiff는 이전 Path arrary의 길이 에서 현재 Path array의 길이를 뺀다.-->
+        <!-- a b-->
+        <!-- a b c -->
+        <!-- levelDiff는 -1-->
+      
+
+      
+        <ul class="" data-menu-depth="1">
+      
+    
+
+    
+
+    <li class="">
+      
+        <a href="/component/software/2024-01-03-hey.html" class=" ">
+      
+
+      Helllo aa
+
+      
+        </a>
+      
+    
+  
+
+    <!--/component/software/-->
+    <!--/compenent/software/2024-01-03-hey.html-->
+    <!-- 위 string들이 pagePath가 됨.-->
+    <a>hialpha</a>
+
+  
+  
+
+  <!--pathSlice는  /component -->
+
+  <!-- component 폴더 내의 컨텐츠인 경우에-->
+  
+    
+    <!-- pagePathLength 는 pagepath의 크기-->
+    
+    
+    <!-- extractLastCharPos는 pagePath의 크기 -1, 마지막 character의 인덱스 -->
+    
+    <!-- lastChar은 마지막 character-->
+
+
+    <!--/component/software/-->
+    <!-- size == 20-->
+    <!-- lastCharpos = 19-->    
+    <!-- if 폴더인 경우 pagePath는 /component/software-->
+    
+
+    
+    
+    
+    <!-- nextPathLength는 page url을 /로 split한 array의 사이즈-->
+    <!-- /component/software 인 경우에 , nextPath는 component, software-->
+    <!-- nextPathLength는 2-->
+    <!-- nextPath는 다음 path의 로직에서의 lastPath가 될 수 있음-->
+
+
+    <!--처음 loop일 경우, nextPathLength 는 항상 lastPathLength보다 크다.-->
+    
+      
+      <!-- nextPath 배열은 longestPath로 치환-->
+      
+      <!-- lastPath는 lastPath-->
+    
+
+
+
+    
+
+    <!--1.  longest Path가 nextPath가 된 경우 ( 이 의미는 해당 컨텐츠가 이전 loop의 하위 폴더일 가능성이 있다고 볼 수 있다.)-->
+    <!--2.  새로운 폴더일 경우에 longestPath는 lastPath가 된다. 이 내용을 숙지하고 아래 내용을 보자-->
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+        <!-- 해당 분기는 longesPath의 현재 component의 인덱스-1 의 값이 shortedPath의 lastIndex와 같지 않고,-->
+        <!-- 현재 component가 last 아이템이 아닐경우-->
+        <!-- 위내용의 의미는 -->
+        
+
+        
+      
+    
+
+    <!-- 하위 폴더가 아닌 새로운 depth라면, 아래 분기를 탄다.-->
+    
+      </li>
+    
+
+    
+
+    <li class="">
+      
+
+      hi aa
+
+      
+    
+  
+
+    <!--/component/software/-->
+    <!--/compenent/software/2024-01-03-hey.html-->
+    <!-- 위 string들이 pagePath가 됨.-->
+    <a>Byealpha</a>
+
+  
+  
+
+  <!--pathSlice는  /component -->
+
+  <!-- component 폴더 내의 컨텐츠인 경우에-->
+  
+    
+    <!-- pagePathLength 는 pagepath의 크기-->
+    
+    
+    <!-- extractLastCharPos는 pagePath의 크기 -1, 마지막 character의 인덱스 -->
+    
+    <!-- lastChar은 마지막 character-->
+
+
+    <!--/component/software/-->
+    <!-- size == 20-->
+    <!-- lastCharpos = 19-->    
+    <!-- if 폴더인 경우 pagePath는 /component/software-->
+    
+
+    
+    
+    
+    <!-- nextPathLength는 page url을 /로 split한 array의 사이즈-->
+    <!-- /component/software 인 경우에 , nextPath는 component, software-->
+    <!-- nextPathLength는 2-->
+    <!-- nextPath는 다음 path의 로직에서의 lastPath가 될 수 있음-->
+
+
+    <!--처음 loop일 경우, nextPathLength 는 항상 lastPathLength보다 크다.-->
+    
+      
+      <!-- nextPath 배열은 longestPath로 치환-->
+      
+      <!-- lastPath는 lastPath-->
+    
+
+
+
+    
+
+    <!--1.  longest Path가 nextPath가 된 경우 ( 이 의미는 해당 컨텐츠가 이전 loop의 하위 폴더일 가능성이 있다고 볼 수 있다.)-->
+    <!--2.  새로운 폴더일 경우에 longestPath는 lastPath가 된다. 이 내용을 숙지하고 아래 내용을 보자-->
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+    
+      
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
+      
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
+
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
+      
+        <!-- 해당 분기는 longesPath의 현재 component의 인덱스-1 의 값이 shortedPath의 lastIndex와 같지 않고,-->
+        <!-- 현재 component가 last 아이템이 아닐경우-->
+        <!-- 위내용의 의미는 -->
+        
+
+        
+      
+    
+
+    <!-- 하위 폴더가 아닌 새로운 depth라면, 아래 분기를 탄다.-->
+    
+        <!-- levelDiff는 이전 Path arrary의 길이 에서 현재 Path array의 길이를 뺀다.-->
+        <!-- a b-->
+        <!-- a b c -->
+        <!-- levelDiff는 -1-->
+      
+
+      
+        <ul class="" data-menu-depth="2">
+      
+    
+
+    
+
+    <li class="">
+      
+        <a href="/component/software/hi/2024-01-07-bye.html" class=" ">
+      
+
+      Bye aa
+
+      
+        </a>
+      
+    
+  
+
+
+
+  </li></ul>
+
+  </li></ul>
+
+  </li></ul>
+
+  </li></ul>
+
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Tips, Warnings, and Dangers</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/jekyll/tips_warnings_dangers">Tips, Warnings, and Dangers</h1>
+                    
+
+                    <p>This jekyll-theme supports tips, warnings, and dangers blocks and the style is referred
+from <a href="https://discordjs.guide/popular-topics/canvas.html#setting-up-napi-rs-canvas">the discord.js website</a>.</p>
+
+<p>You could have the following <a href="https://kramdown.gettalong.org/quickref.html#block-attributes">markdown attributes (supported by kramdown)</a>:</p>
+
+<h3 id="tips">Tips</h3>
+
+<p>Using a <code class="language-plaintext highlighter-rouge">{: .block-tip}</code> attribute:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### TIP</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have</span>
+<span class="gt">&gt; this or a similar version after installation.</span>
+{: .block-tip }
+</code></pre></div></div>
+
+<blockquote class="block-tip">
+  <h5 id="tip">TIP</h5>
+
+  <p>This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have
+this or a similar version after installation.</p>
+</blockquote>
+
+<h3 id="warnings">Warnings</h3>
+
+<p>Using a <code class="language-plaintext highlighter-rouge">{: .block-warning}</code> attribute:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### WARNING</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; Be sure that you're familiar with things like async/await and object destructuring</span>
+<span class="gt">&gt; before continuing, as we'll be making use of features like these.</span>
+{: .block-warning }
+</code></pre></div></div>
+
+<blockquote class="block-warning">
+  <h5 id="warning">WARNING</h5>
+
+  <p>Be sure that you’re familiar with things like async/await and object destructuring
+before continuing, as we’ll be making use of features like these.</p>
+</blockquote>
+
+<h3 id="dangers">Dangers</h3>
+
+<p>Using a <code class="language-plaintext highlighter-rouge">{: .block-danger}</code> attribute:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### DANGER</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; You cannot delete an ephemeral message.</span>
+{: .block-danger }
+</code></pre></div></div>
+
+<blockquote class="block-danger">
+  <h5 id="danger">DANGER</h5>
+
+  <p>You cannot delete an ephemeral message.</p>
+</blockquote>
+
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+
+                        <a href="/jekyll/2022-06-26-wide_tables.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Wide tables">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/jekyll/2023-08-31-mermaid.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Diagrams with mermaid.js">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Diagrams with mermaid.js",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_posts/2023-08-31-mermaid.md",
+            "ref": "_posts/2023-08-31-mermaid.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "Let's Dive",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_posts/2022-06-30-tips_warnings_dangers.md",
+        "mtime": "2022-06-30 00:00:00 +0900",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2024-01-13 15:05:38 +0900"
+    },
+    "basePath": "",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/assets/gitbook/gitbook.js"></script>
+<script src="/assets/gitbook/theme.js"></script>
+
+<script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+</body>
+</html>

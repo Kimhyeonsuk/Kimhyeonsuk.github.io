@@ -1,5 +1,5 @@
 ---
-title: Software hi index
+title: hi
 author: Hyeonsuk
 date: 2024-01-07
 category: Jekyll

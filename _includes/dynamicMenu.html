@@ -6,16 +6,31 @@
 {% assign depthAttr = include.depthAttr | default: "data-menu-depth" %}
 
 {% for sortedPage in sortedPages %}
-  
+    <!--/component/software/-->
+    <!--/compenent/software/2024-01-03-hey.html-->
+    <!-- 위 string들이 pagePath가 됨.-->
+    <a>{{sortedPage.title}}alpha</a>
+
   {% assign pagePath = sortedPage.url %}
   {% assign pathSlice = pagePath | slice: 0, rootLength %}
 
+  <!--pathSlice는  /component -->
+
+  <!-- component 폴더 내의 컨텐츠인 경우에-->
   {% if include.root == pathSlice %}
     {% assign pagePathLength = pagePath | size %}
-
+    <!-- pagePathLength 는 pagepath의 크기-->
+    
     {% assign extractLastCharPos = pagePath | size | minus: 1 %}
+    <!-- extractLastCharPos는 pagePath의 크기 -1, 마지막 character의 인덱스 -->
     {% assign lastChar = pagePath | slice: extractLastCharPos %}
+    <!-- lastChar은 마지막 character-->
 
+
+    <!--/component/software/-->
+    <!-- size == 20-->
+    <!-- lastCharpos = 19-->    
+    <!-- if 폴더인 경우 pagePath는 /component/software-->
     {% if lastChar == '/' %}
       {% assign pagePath = pagePath | slice: 0, extractLastCharPos %}
     {% endif %}
@@ -23,22 +38,55 @@
     {% assign lastPathLength = lastPath | size %}
     {% assign nextPath = pagePath | split: '/' %}
     {% assign nextPathLength = nextPath | size %}
+    <!-- nextPathLength는 page url을 /로 split한 array의 사이즈-->
+    <!-- /component/software 인 경우에 , nextPath는 component, software-->
+    <!-- nextPathLength는 2-->
+    <!-- nextPath는 다음 path의 로직에서의 lastPath가 될 수 있음-->
 
+
+    <!--처음 loop일 경우, nextPathLength 는 항상 lastPathLength보다 크다.-->
     {% if nextPathLength >= lastPathLength %}
       {% assign longestPath = nextPath %}
+      <!-- nextPath 배열은 longestPath로 치환-->
       {% assign shortestPath = lastPath %}
+      <!-- lastPath는 lastPath-->
     {% else %}
+        <!-- 아닐 경우 위 분기문과 반대-->
+        <!--ex) 처음 loop 에서 nextPath는 component와 software를 가지는 배열-->
+        <!--해당 배열이 lastPath가 되고 두번째 loop가 시작됨-->
+        <!-- 두번째 loop에서 nextPath 는 component, software, html 이므로 위 분기를 탄다-->
+
+        <!-- 만일 세번째 loop에서 /component/james 가 들어온다면 이 분기를 타게 되고-->
+        <!-- longestPath 는 이전의 component, software html을 가지는 배열이 되고-->
+        <!-- sortestPath는 현재의 component james로 치환된다.-->
       {% assign longestPath = lastPath %}
       {% assign shortestPath = nextPath %}
     {% endif %}
 
+
+
     {% assign newLevel = false %}
 
+    <!--1.  longest Path가 nextPath가 된 경우 ( 이 의미는 해당 컨텐츠가 이전 loop의 하위 폴더일 가능성이 있다고 볼 수 있다.)-->
+    <!--2.  새로운 폴더일 경우에 longestPath는 lastPath가 된다. 이 내용을 숙지하고 아래 내용을 보자-->
     {% for longestPathComponent in longestPath %}
       {% assign index = forloop.index | minus: 1 %}
+      <!-- index는 현재 인덱스에서 -1. 왜?-->
       {% assign shortestPathLastIndex = shortestPath | size | minus: 1 %}
+      <!-- shortestPathLastInex 는 1번의 경우에 이전 path의 크기 -1 -->
 
+      <!-- 이전 path의 마지막과 같지 않다., 지금의 component는 이전 path의 하위 폴더-->
+      <!-- 예를 들어보자 longestPath 는 a b c-->
+      <!-- shortedPath는 a b -->
+      <!-- 아래 if문의 의미는 위와 같은 상황에 진입하지 않도록 해주는 예외처리 비슷한 구문 -->
+      <!-- 위와 같은 상황이면 newLevel은 항상 false-->
+
+      <!-- longest Path의 현재 컴포넌트와 현재 컴포넌트의 인덱스 -1위치의 shortestPath 값이 같지 않을때-->
+      <!-- 위의 의미는 longestPath가 shortedPath의 하위 경로가 아님을 의미한다.-->
       {% if longestPathComponent != shortestPath[index] %}
+        <!-- 해당 분기는 longesPath의 현재 component의 인덱스-1 의 값이 shortedPath의 lastIndex와 같지 않고,-->
+        <!-- 현재 component가 last 아이템이 아닐경우-->
+        <!-- 위내용의 의미는 -->
         {% if index != shortestPathLastIndex and forloop.last == false %}
           {% assign newLevel = true %}
         {% endif %}
@@ -49,7 +97,12 @@
       {% endif %}
     {% endfor %}
 
+    <!-- 하위 폴더가 아닌 새로운 depth라면, 아래 분기를 탄다.-->
     {% if newLevel %}
+        <!-- levelDiff는 이전 Path arrary의 길이 에서 현재 Path array의 길이를 뺀다.-->
+        <!-- a b-->
+        <!-- a b c -->
+        <!-- levelDiff는 -1-->
       {% assign levelDiff = lastPathLength | minus: nextPathLength %}
 
       {% if levelDiff < 0 %}
@@ -70,7 +123,7 @@
         <a href="{{ sortedPage.url }}" class="{{ include.linkClass }} {% if page.url == sortedPage.url %}{{ include.activeClass }}{% endif %}">
       {% endif %}
 
-      {{ sortedPage.title }}
+      {{ sortedPage.title }} aa
 
       {% if sortedPage.content != '' %}
         </a>
