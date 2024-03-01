@@ -12,7 +12,7 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
     var init = function () {
         // adding the trigger element to each ARTICLES parent and binding the event
         var config = gitbook.state.config.pluginsConfig || {};
-        var articlesExpand = false;
+        var articlesExpand = true;
         if (config && config[PLUGIN]) {
             articlesExpand = config[PLUGIN].articlesExpand || false;
         }
@@ -33,6 +33,7 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
                 .parent(CHAPTER)
                 .find(ARTICLE_CHILDREN)
                 .prev()
+                .css('cursor', 'pointer')
                 .append(
                     $(TRIGGER_TEMPLATE)
                         .on('click', function (e) {

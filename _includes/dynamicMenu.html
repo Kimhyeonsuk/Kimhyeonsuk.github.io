@@ -3,7 +3,7 @@
 {% assign sortedPages = site.html_pages | sort: 'url' %}
 {% assign lastPath = nil %}
 {% assign depth = 0 %}
-{% assign depthAttr = include.depthAttr | default: "data-menu-depth" %}
+{% assign depthAttr = include.depthAttr | default: "data-level" %}
 
 <script>
     function toggleSubMenu(event) {
@@ -11,7 +11,17 @@
       var subMenu = event.target.nextElementSibling;
       subMenu.style.display = (subMenu.style.display === "none") ? "block" : "none";
     }
+    // Fixes the page links scroll problem on both desktop and mobile browsers
+    function pageScrollToTop(element) {
+            // both mobile and non-mobile
+            $('div.body-inner').animate({scrollTop: 0});
+            $(element).parent().find('li>ul>li').removeClass('active');
+            return true;  // propagate
+    }
 </script>
+
+<ul class="summary" {{depthAttr}}="{{depth}}">
+
 {% for sortedPage in sortedPages %}
 
   {% assign pagePath = sortedPage.url %}
@@ -62,7 +72,9 @@
       {% assign levelDiff = lastPathLength | minus: nextPathLength %}
 
       {% if levelDiff < 0 %}
-        <ul class = "summary" {{depthAttr}}="{{depth}}">
+        {% if lastPath != nil %}
+            <ul>
+        {% endif %}
       {% else %}
         {% for i in (1..levelDiff) %}
           </ul></li>
@@ -74,18 +86,19 @@
 
     {% assign depth = nextPathLength | minus: rootComponentsLength %}
 
-    <!-- <li class="{{ include.listItemClass }}"> -->
-    <li class="chapter expanded">
-      {% if sortedPage.content != '' %}
-        <a href="{{ sortedPage.url }}" class="{{ include.linkClass }} {% if page.url == sortedPage.url %}{{ include.activeClass }}{% endif %}">
 
-      {% else %}
-        <a href="#" class="{{ include.linkClass }}" onclick="toggleSubMenu(event)">
-      {% endif %}
+    {% if sortedPage.content != '' %}
+      <li class="chapter active" {{depthAttr}}="1.2">
+        <a href="{{ sortedPage.url }}">
+            {{ sortedPage.title }} {{levelDiff}}
+        </a>
+    {% else %}
+        <li class ="chapter" {{depthAttr}}="1.1">
+            <a href="#"  onclick="pageScrollToTop(this)">
+                {{ sortedPage.title }} {{levelDiff}}
+            </a>
+    {% endif %}
 
-      {{ sortedPage.title }}
-
-      </a>
     {% assign lastPath = nextPath %}
   {% endif %}
 {% endfor %}
@@ -93,3 +106,5 @@
 {% for i in (0..depth) %}
   </li></ul>
 {% endfor %}
+
+</ul>
