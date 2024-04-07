@@ -88,13 +88,13 @@
 
 
     {% if sortedPage.content != '' %}
-      <li class="chapter active" {{depthAttr}}="1.2">
+      <li class="chapter" {{depthAttr}}="1.1">
         <a href="{{ sortedPage.url }}">
             {{ sortedPage.title }} {{levelDiff}}
         </a>
     {% else %}
         <li class ="chapter" {{depthAttr}}="1.1">
-            <a href="#"  onclick="pageScrollToTop(this)">
+            <a href="#"  >
                 {{ sortedPage.title }} {{levelDiff}}
             </a>
     {% endif %}
