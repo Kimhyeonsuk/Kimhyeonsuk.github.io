@@ -90,12 +90,12 @@
     {% if sortedPage.content != '' %}
       <li class="chapter" {{depthAttr}}="1.1">
         <a href="{{ sortedPage.url }}">
-            {{ sortedPage.title }} {{levelDiff}}
+            {{ sortedPage.title }}
         </a>
     {% else %}
         <li class ="chapter" {{depthAttr}}="1.1">
             <a href="#"  >
-                {{ sortedPage.title }} {{levelDiff}}
+                {{ sortedPage.title }}
             </a>
     {% endif %}
 
