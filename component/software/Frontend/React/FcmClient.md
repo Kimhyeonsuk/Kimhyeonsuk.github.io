@@ -61,3 +61,63 @@ https://nodejs.org/en/
             );
         }
     ```
+
+### Bootstrap 적용
+
+* React Bootstap component에서 navbar를 가져와 적용하였다. 
+* https://react-bootstrap.github.io/docs/components/navbar
+
+Navigation.js 파일 생성 및 코드에 맞게 수정
+
+```javascript
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+export default function Navigation() {
+  return (
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">Fcm-Test-Client</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#features">Register</Nav.Link>
+            <Nav.Link href="#pricing">Send</Nav.Link>
+            <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+```
+
+* App.js에 적용해보았다.
+```javascript
+function App() {
+  return (
+    <div>
+      <Navigation />
+    </div>
+  );
+}
+```
+
