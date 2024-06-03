@@ -77,3 +77,27 @@ Love *is* bold
 | ```I Just love *bold*``` | ```I Just love <em>bold</em>``` | I Just love *bold* |
 | ```I Just love _bold_``` | ```I Just love <em>bold</em>``` | I Just love _bold_ |
 | ```Love*is*bold``` |   ```I Just love <em>bold</em>``` | Love*is*bold |
+
+
+
+### 3.3Horisontal Line
+```markdown
+* * *
+***
+*****
+- - -
+-----------------
+```
+
+***
+* * *
+*****
+- - -
+---------
+
+### 3.4 cancle line
+```markdown
+~~cancel~~
+```
+
+~~cancel~~
