@@ -45,3 +45,35 @@ layout: post
 > This is h1
 > * This is 
 > ```code```
+
+
+## 3. Emphasis
+
+### 3.1 Bold
+
+```markdown
+I Just love**bold**
+I Just love __bold__
+Love **is** bold
+```
+
+| Markdown | Html |Description |
+| -------- | ---- |----------- |
+| ```I Just love **bold**``` | ```I Just love <strong>bold</strong>``` | I Just love **bold** |
+| ```I Just love __bold__``` | ```I Just love <strong>bold</strong>``` | I Just love __bold__ |
+| ```Love**is**bold``` |   ```I Just love <strong>bold</strong>``` | Love**is**bold |
+
+
+### 3.2 Italic
+
+```markdown
+I Just love*bold*
+I Just love _bold_
+Love *is* bold
+```
+
+| Markdown | Html |Description |
+| -------- | ---- |----------- |
+| ```I Just love *bold*``` | ```I Just love <em>bold</em>``` | I Just love *bold* |
+| ```I Just love _bold_``` | ```I Just love <em>bold</em>``` | I Just love _bold_ |
+| ```Love*is*bold``` |   ```I Just love <em>bold</em>``` | Love*is*bold |
