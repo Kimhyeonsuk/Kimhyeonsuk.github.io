@@ -1,7 +1,7 @@
 ---
-title: 다이빙
+title: Basic
 author: Hyeonsuk
-date: 2024-06-03
+date: 2024-06-06
 category: Jekyll
 layout: post
 ---

@@ -1,7 +1,7 @@
 ---
-title: 취미
+title: Docker
 author: Hyeonsuk
-date: 2024-06-03
+date: 2024-06-06
 category: Jekyll
 layout: post
 ---
