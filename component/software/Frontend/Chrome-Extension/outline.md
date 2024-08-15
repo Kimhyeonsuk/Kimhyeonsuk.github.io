@@ -12,5 +12,12 @@ layout: post
 GPT모델을 통해 대화가 가능한 화면을 구성하고, 사이드패널을 포함해서 구성하려고 한다.
 
 구현을 진행할 스펙은 다음과 같이 진행하려고 한다. 아직 막연하기 때문에 추후 계속 수정할 예정입니다. 
-Frontend : React + Typescript + (내부 framework?)
+Frontend : React + Typescript + next.js
 Backend : GPT 모델과 통신 가능한 서버
+
+
+목표는 아래와 같은 Chatbot AI template을 따라가보며 학습하려고 한다.
+[목표 프로젝트][1]
+
+
+[1]: https://github.com/Kimhyeonsuk/nextjs-chat
