@@ -21,7 +21,53 @@ App router로 구현하려고 한다.
     * public
 * component folder와 lib 폴더는??
     * `/components` 와 `/lib`폴더도 src 아래에 넣어준다.
-    * [참고][1] 
+    * [참고][1]
+
+* nextja-chat -> whale 로 이전
+    * `src`폴더 아래에 `/lib` 폴더와 `/components` 폴더를 이전
+    * package.json dependency를 복사.
+
+
+    ![Alt text](image-1.png)
+
+
+    * prettier.config.cjs 파일 복사
+
+### Remove Auth
+* 난 auth관련 내용은 사용하지 않을 것이기 때문에 auth와 관련된 코드를 제거할 것 이다.
+![Alt text](image-2.png)
+
+* Index page에서 아래와 같이 auth method를 통해 사용자의 정보를 받아오고 있다.
+```
+  const session = (await auth()) as Session
+
+```
+* Session 정보
+```
+export interface Session {
+  user: {
+    id: string
+    email: string
+  }
+}
+```
+* auth.ts 파일을 생성 후, 아래와 같이 const value를 리턴하도록 해주었다.
+```
+export const auth = () => {
+    return {
+        user: {
+            id: 'sukrrard',
+            email: 'sukrard97@gmail.com'
+        }
+    }
+}
+```
+* 해당 함수는 단순 const return이므로 await auth()라고 작성된 함수를 모두 바꾸어 주엇다.
+![Alt text](image-3.png)
+
+### Build
+* 빌드 성공한 모습.
+![Alt text](image-4.png)
 
 ### Supported Features
 * Dynamic Routes when using `getStaticPath`
