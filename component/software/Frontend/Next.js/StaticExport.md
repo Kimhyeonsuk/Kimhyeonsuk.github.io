@@ -69,6 +69,13 @@ export const auth = () => {
 * 빌드 성공한 모습.
 ![Alt text](image-4.png)
 
+### Static Export
+* 이제 static export를 통해 Chrome extension에 등록하기 위한 `out`폴더를 생성해보도록 하려고 한다.
+* next.config.mjs에 아래와 같이 `output: 'export'`를 추가해서 `pnpm build` 명령어를 수행해 보자
+
+* 역시 build 실패, signIn, singUp, Login 관련 코드를 모두 삭제해보자
+
+
 ### Supported Features
 * Dynamic Routes when using `getStaticPath`
 
