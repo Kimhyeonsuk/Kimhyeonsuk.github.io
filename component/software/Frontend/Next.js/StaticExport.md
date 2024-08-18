@@ -76,6 +76,73 @@ export const auth = () => {
 * 역시 build 실패, signIn, singUp, Login 관련 코드를 모두 삭제해보자
 
 
+### 기존 signIn, singUp, Login 코드 분석
+* 예시로 signUp의 action.ts 코드를 살펴보자.
+* signIn의 parameter 는 다음과 같다.
+
+```
+await signIn('credentials', {
+          email,
+          password,
+          redirect: false
+        })
+```
+
+
+* 내부 함수의 내용을 간소화해서 보여주면 다음과 같다.
+```
+export const { auth, signIn, signOut } = NextAuth({
+  ...authConfig,
+  providers: [...]
+})
+```
+
+* authConfig의 세부구현
+```
+export const authConfig = {
+  secret: process.env.AUTH_SECRET,
+  pages: {
+    signIn: '/login',
+    newUser: '/signup'
+  },
+  callbacks: {...
+  },
+  providers: []
+} satisfies NextAuthConfig
+```
+
+* speread operator를 통해서 provider는 NextAuth의 parameter에서 갈아끼워질 예정으로 보인다.
+* 그렇다면, signIn method의 parameter인 'credentials', 와 두번째 parameter에 대응되는 값은 어떤 값이지?
+* NextAuth 메소드를 파헤쳐보도록 하자
+* ~~내부코드를 보니 그냥 redirect하는 것 같다.. 그냥 주석처리 해보자~~
+```
+export default function NextAuth(config: NextAuthConfig): NextAuthResult {
+  setEnvDefaults(config)
+  const httpHandler = (req: NextRequest) => Auth(reqWithEnvUrl(req), config)
+  return {
+    handlers: { GET: httpHandler, POST: httpHandler } as const,
+    // @ts-expect-error
+    auth: initAuth(config),
+    signIn: (provider, options, authorizationParams) => {
+      return signIn(provider, options, authorizationParams, config)
+    },
+    signOut: (options) => {
+      return signOut(options, config)
+    },
+    update: (data) => {
+      return update(data, config)
+    },
+  }
+}
+```
+
+
+
+### 다시 처음으로 돌아가서..
+* 기존 코드를 그대로 복사 붙혀넣기 후, auth.ts 수정없이 빌드했을 때, 문제 없이 빌드가 되었다... 여기서 부터 다시 시작하려한다.
+
+
+
 ### Supported Features
 * Dynamic Routes when using `getStaticPath`
 
