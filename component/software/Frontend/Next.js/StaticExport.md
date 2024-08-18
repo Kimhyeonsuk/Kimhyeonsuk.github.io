@@ -73,7 +73,7 @@ export const auth = () => {
 * 이제 static export를 통해 Chrome extension에 등록하기 위한 `out`폴더를 생성해보도록 하려고 한다.
 * next.config.mjs에 아래와 같이 `output: 'export'`를 추가해서 `pnpm build` 명령어를 수행해 보자
 
-* 역시 build 실패, signIn, singUp, Login 관련 코드를 모두 삭제해보자
+* ~~역시 build 실패, signIn, singUp, Login 관련 코드를 모두 삭제해보자~~
 
 
 ### 기존 signIn, singUp, Login 코드 분석
@@ -140,6 +140,30 @@ export default function NextAuth(config: NextAuthConfig): NextAuthResult {
 
 ### 다시 처음으로 돌아가서..
 * 기존 코드를 그대로 복사 붙혀넣기 후, auth.ts 수정없이 빌드했을 때, 문제 없이 빌드가 되었다... 여기서 부터 다시 시작하려한다.
+* middleware.ts 는 삭제해주었다.
+
+
+### Build 성공
+* build는 성공했지만, 아래와 같은 문제가 발생했다.
+```
+> Build error occurred
+Error: Page "/chat/[id]" is missing "generateStaticParams()" so it cannot be used with "output: export" config.
+```
+* 역시 dynamic route 폴더 구조로 인해서 문제가 발생한 상황!
+* Next.js doc에서 dynamic route에 대한 내용을 확인해 보자
+
+
+### DynamicRoute with Static Export
+* dynamic route가 존재하는 page.tsx에 아래와 같이 코드를 추가하였다.
+```
+export function generateStaticParams(): any[] {
+  return [{
+    params: {
+      id: 'sukrrard'
+    }
+  }]
+}
+```
 
 
 
