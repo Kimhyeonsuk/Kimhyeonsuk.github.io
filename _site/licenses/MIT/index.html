@@ -46,7 +46,7 @@ Powered by Hydejack v9.2.1 <https://hydejack.com/>
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="MIT License" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"<firstname> <lastname>"},"dateModified":"2025-01-27T15:08:17+09:00","description":"Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"MIT License","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"<firstname> <lastname>"},"url":"http://localhost:4000/licenses/MIT/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"<firstname> <lastname>"},"dateModified":"2025-01-27T23:33:26+09:00","description":"Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"MIT License","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"<firstname> <lastname>"},"url":"http://localhost:4000/licenses/MIT/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -117,7 +117,7 @@ Powered by Hydejack v9.2.1 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2025-01-27T23:32:44+09:00',
+    INDEX_KEY: 'index--2025-01-28T11:33:09+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -147,6 +147,8 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 
 <!-- Add HTML tags here to be included in the head. You can delete the below: -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="/assets/js/sidebar-folder.js"></script>
 <link rel="dns-prefetch" href="https://assets.gumroad.com">
 <script type="module">
   const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
@@ -364,44 +366,78 @@ SOFTWARE.</p>
   
     
       
+      
       <li>
-        <a
-          id="_drawer--opened"
-          href="/example/"
-          class="sidebar-nav-item "
+        <div class="menu-wrapper">
           
-        >
-          Example
-        </a>
+          <a
+            id="_drawer--opened"
+            href="/example/"
+            class="sidebar-nav-item "
+            
+            >
+            Example
+          </a>
+        </div>
+        
       </li>
     
       
+      
       <li>
-        <a
+        <div class="menu-wrapper">
           
-          href="/docs/"
-          class="sidebar-nav-item "
+            <button class="spread-btn" onclick="javascript:spread(11)">
+              <span id="spread-icon-11" class="material-icons">arrow_right</span>
+            </button>
           
-        >
-          Documentation
-        </a>
+          <a
+            
+            href="/docs/"
+            class="sidebar-nav-item "
+            
+            >
+            Documentation
+          </a>
+        </div>
+        
+          <div class="menu-wrapper">
+            <input type="checkbox" id="folder-checkbox-11">
+            <ul>
+            
+              <li>
+                <a
+                  class="sidebar-nav-item "
+                  href="/tes/"
+                  >
+                  Test
+                </a>
+              </li>
+            
+            </ul>
+          </div>
+        
       </li>
     
       
+      
       <li>
-        <a
+        <div class="menu-wrapper">
           
-          href="/about/"
-          class="sidebar-nav-item "
-          
-        >
-          About
-        </a>
+          <a
+            
+            href="/about/"
+            class="sidebar-nav-item "
+            
+            >
+            About
+          </a>
+        </div>
+        
       </li>
     
   
 </ul>
-
   </nav>
 
   
