@@ -53,7 +53,7 @@ menu:
     url:               /dev/
     submenu: 
       - title:         iOS
-        url:           /iOS/
+        url:           /ios/
   - title:             Study Notes
     url:               /study_notes/
   # - title:             Documentation
